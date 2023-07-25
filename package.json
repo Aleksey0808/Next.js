@@ -1,0 +1,25 @@
+{
+  "name": "next.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleksey0808/Next.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aleksey0808/Next.js/issues"
+  },
+  "homepage": "https://github.com/Aleksey0808/Next.js#readme",
+  "dependencies": {
+    "@emotion/styled": "^11.11.0",
+    "next": "^13.4.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
