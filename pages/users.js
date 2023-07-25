@@ -1,16 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Back, Links } from '../styled/users.styled'
+import MainContainer from '../components/MainContainer'
 
-const Users = () => {
-  const [users, setUsers] = useState([
-    { id: 1, name: 'petya' },
-    { id: 2, name: 'vasya' },
-  ])
+const Users = ({ users }) => {
+  // const [users, setUsers] = useState([
+  //   { id: 1, name: 'petya' },
+  //   { id: 2, name: 'vasya' },
+  // ])
+
+  // useEffect(async () => {
+  //   const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  //   const data = await res.json()
+  //   setUsers(data)
+  // }, [])
   return (
-    <>
-      <Back>
+    <MainContainer keywords={'Users page'}>
+      {/* <Back>
         <Links href="/">Back</Links>
-      </Back>
+      </Back> */}
       <div>
         <h1>List userse</h1>
         <ul>
@@ -21,8 +28,16 @@ const Users = () => {
           ))}
         </ul>
       </div>
-    </>
+    </MainContainer>
   )
 }
 
 export default Users
+
+export async function getStaticProps(context) {
+  const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  const users = await res.json()
+  return {
+    props: { users },
+  }
+}

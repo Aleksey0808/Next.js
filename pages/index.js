@@ -1,23 +1,13 @@
-import NavBar from '../components/NavBar'
-import { Container } from '../styled/index.syled'
+// import NavBar from '../components/NavBar'
+// import { Container } from '../styled/index.syled'
+// import Head from 'next/head'
+import MainContainer from '../components/MainContainer'
 
 const index = () => {
   return (
-    <div>
-      <Container>
-        <NavBar href={'/'} text={'Main page'} />
-        <NavBar href={'/users'} text={'Users page'} />
-      </Container>
-      {/* <Ul>
-        <Li>
-          <Links href="/">Main page</Links>
-        </Li>
-        <Li>
-          <Links href="/users">Users page</Links>
-        </Li>
-      </Ul> */}
+    <MainContainer keywords={'Main page'}>
       <h1>Main page</h1>
-    </div>
+    </MainContainer>
   )
 }
 
